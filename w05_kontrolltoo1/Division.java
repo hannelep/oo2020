@@ -36,13 +36,14 @@ public class Division {
             int length = String.valueOf(answer).length();
             System.out.println(a + " * " + b + " = " + answer);
             for( int i = 0; i < length; i++){
+                //int value =(int)answer;
                 String numberString = Integer.toString(answer);
                 char letterChar = numberString.charAt(i);
                 int theDigit = Integer.parseInt("" + letterChar);
                 Multiplication m = new Multiplication();
-                int vastus = m.multiply(b, theDigit);
+                int answer2 = m.multiply(b, theDigit);
                 
-                System.out.println(vastus); 
+                System.out.println(answer2); 
             }
         }
 
@@ -53,6 +54,7 @@ public class Division {
         if(b == 0) {
             //kui nulliga ei jagu, tagastab selle arvu, hetkel teisiti ei oska
             divide = 1234567890;
+
         } else {
             divide = a/b;    
         }
